@@ -22,6 +22,13 @@ export const TxApprove = () => {
     navigate(Pages.index());
   };
 
+  const senderAndReceiverAreTheSame = () => {
+    if (!txRequest?.tx?.operations[0]) return false;
+    const from = txRequest?.tx?.operations[0].from;
+    const to = txRequest?.tx?.operations[0].to;
+    return from?.address === to?.address;
+  };
+
   return (
     <>
       <Dialog.Heading>
@@ -37,11 +44,16 @@ export const TxApprove = () => {
       </Dialog.Heading>
       <Dialog.Description as="div" css={styles.description}>
         {txRequest.status('waitingApproval') && (
-          <Alert status="warning" css={styles.alert}>
+          <Alert
+            status={senderAndReceiverAreTheSame() ? 'error' : 'warning'}
+            css={styles.alert}
+          >
             <Alert.Title>Confirm before approve</Alert.Title>
             <Alert.Description>
               <Text fontSize="xs" css={styles.alertDescription}>
-                Carefully check if all details in your transaction are correct
+                {senderAndReceiverAreTheSame()
+                  ? 'The sender and the receiver addresses are the same.'
+                  : 'Carefully check if all details in your transaction are correct'}
               </Text>
             </Alert.Description>
           </Alert>
