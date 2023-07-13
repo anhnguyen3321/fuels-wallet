@@ -1,5 +1,21 @@
 # @fuel-wallet/sdk
 
+## 0.11.0
+
+### Minor Changes
+
+- [#806](https://github.com/FuelLabs/fuels-wallet/pull/806) [`e94d273`](https://github.com/FuelLabs/fuels-wallet/commit/e94d27341158991679108a1d53cdb7d4864e3dec) Thanks [@mpoplavkov](https://github.com/mpoplavkov)! - fix: default connector Fuel Wallet
+
+- [#793](https://github.com/FuelLabs/fuels-wallet/pull/793) [`7e7300f`](https://github.com/FuelLabs/fuels-wallet/commit/7e7300fb3a3e2b3170e100a12845e1e0856aaa56) Thanks [@eswarasai](https://github.com/eswarasai)! - Implemented `addNetwork()` method on Fuel SDK enabling developers to add network
+
+- [#764](https://github.com/FuelLabs/fuels-wallet/pull/764) [`144d722`](https://github.com/FuelLabs/fuels-wallet/commit/144d722fb70d13aaf8cfb17fe97aa0e1719fe65e) Thanks [@eswarasai](https://github.com/eswarasai)! - Enabled FuelWallet SDK to be use directly without the need to wait for the injected script
+
+- [#759](https://github.com/FuelLabs/fuels-wallet/pull/759) [`f79897d`](https://github.com/FuelLabs/fuels-wallet/commit/f79897df28b0d6e63aeedc3af45ea7ad838f1803) Thanks [@tomiiide](https://github.com/tomiiide)! - Handle all errors in the wallet
+
+### Patch Changes
+
+- [#686](https://github.com/FuelLabs/fuels-wallet/pull/686) [`98c8184`](https://github.com/FuelLabs/fuels-wallet/commit/98c818480789ead39b498a9768f989a64ff8c583) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - feat: add sdk.addAbi to add custom ABIs for contracts
+
 ## 0.10.0
 
 ### Minor Changes
